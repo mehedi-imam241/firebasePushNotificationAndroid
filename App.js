@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
+import ForegroundHandler from './src/utils/foregroundHandler';
 
 import {
   requestUserPermission,
@@ -13,9 +14,12 @@ const App = () => {
   }, []);
 
   return (
-    <View style={{alignSelf: 'center', flex: 1, justifyContent: 'center'}}>
-      <Text style={{fontWeight: 'bold'}}>Push notification app</Text>
-    </View>
+    <>
+      <ForegroundHandler />
+      <View style={{alignSelf: 'center', flex: 1, justifyContent: 'center'}}>
+        <Text style={{fontWeight: 'bold'}}>Push notification app</Text>
+      </View>
+    </>
   );
 };
 

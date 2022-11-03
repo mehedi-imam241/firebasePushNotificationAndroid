@@ -56,8 +56,4 @@ export const NotificationListener = () => {
         );
       }
     });
-
-  messaging().onMessage(async remoteMessage => {
-    console.log('Foreground app notification: ', remoteMessage.notification);
-  });
 };
